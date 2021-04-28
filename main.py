@@ -19,33 +19,68 @@ def run():
                 # Configure positions  of buttons based on your screen
                 # Mine button
                 if imgsearch.imagesearch("img/mine.png")[0] != -1:
-                    hc.move((820, 920), 1)
-                    hc.click()
+                    hc.move((960, 975), 1)
+                    hc.click()                    
+                    print(f"clicco mine")
+                    
 
                 # Claim TLM button
                 if imgsearch.imagesearch("img/claim.png")[0] != -1:
-                    hc.move((800, 630), 1)
+                    hc.move((958, 634), 1)
                     hc.click()
+                    print(f"clicco claim")
 
                 # Close error message button
                 if imgsearch.imagesearch("img/timed_out.png")[0] != -1:
                     hc.move((1265, 310), 1)
+                    #Point(x=1460, y=252)
                     hc.click()
 
+                # clicca su recaptcha
+                if imgsearch.imagesearch("img/recaptcha.png")[0] != -1:
+                    hc.move((182, 603), 1)
+                    hc.click()
+                    print(f"clicco recaptcha")
+
+                # clicca su omino
+                if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                    hc.move((231, 824), 1)
+                    hc.click()
+                    print(f"clicco omino")
+                    time.sleep(2)
+                    if imgsearch.imagesearch("img/riprova.png")[0] != -1:
+                        hc.move((193, 735), 1)
+                        hc.click()
+                        print(f"clicco riprova")
+                        time.sleep(1)
+                    if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                        hc.move((291, 735), 1)
+                        hc.click()
+                        print(f"clicco omino")
+                    time.sleep(1)
+                    if imgsearch.imagesearch("img/approve.png")[0] != -1:
+                        hc.move((285, 709), 1)
+                        hc.click()
+                        print(f"clicco approva")
+                        time.sleep(1)
+                
+                                    
+                    
+                #if imgsearch.imagesearch("img/approve.png")[0] != -1:
+                #   hc.move((285, 709), 1)
+                #   hc.click()
+                        
                 # Main menu: Mine button
                 if imgsearch.imagesearch("img/mine_main_menu.png")[0] != -1:
-                    hc.move((1420, 350), 1)
+                    hc.move((1511, 382), 1)
                     hc.click()
-
-                # Authorize transaction button
-                if imgsearch.imagesearch("img/captcha_solved.png")[0] != -1:
-                    hc.move((260, 700), 1)
-                    hc.click()
-
+                    print(f"clicco main_menu")
+            
                 # Back to mining hub button
                 if imgsearch.imagesearch("img/go_to_hub.png")[0] != -1:
-                    hc.move((430, 840), 1)
+                    hc.move((550, 883), 1)
                     hc.click()
+                    print(f"clicco hub")
 
                 time.sleep(1)
             except:
