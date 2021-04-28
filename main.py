@@ -7,6 +7,7 @@ from pynput import keyboard
 
 exec_stop = False
 mode = "autoclicker"
+
 # mode = "pos_logger"
 
 def run():
@@ -20,44 +21,51 @@ def run():
                 # Mine button
                 if imgsearch.imagesearch("img/mine.png")[0] != -1:
                     hc.move((960, 975), 1)
-                    hc.click()                    
+                    hc.click()
                     print(f"clicco mine")
                     
+                    
+                # Close error message button
+                if imgsearch.imagesearch("img/timed_out.png")[0] != -1:
+                    hc.move((1460, 252), 1)
+                    print(f"clicco errore")
+                    hc.click()
 
                 # Claim TLM button
                 if imgsearch.imagesearch("img/claim.png")[0] != -1:
                     hc.move((958, 634), 1)
                     hc.click()
                     print(f"clicco claim")
-
-                # Close error message button
-                if imgsearch.imagesearch("img/timed_out.png")[0] != -1:
-                    hc.move((1265, 310), 1)
-                    #Point(x=1460, y=252)
-                    hc.click()
-
-                # clicca su recaptcha
-                if imgsearch.imagesearch("img/recaptcha.png")[0] != -1:
+                    time.sleep(7)                   
+                    # clicca su recaptcha
+                    #if imgsearch.imagesearch("img/recaptcha.png")[0] != -1:
                     hc.move((182, 603), 1)
                     hc.click()
                     print(f"clicco recaptcha")
-
-                # clicca su omino
-                if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                    time.sleep(2)
                     hc.move((231, 824), 1)
                     hc.click()
                     print(f"clicco omino")
                     time.sleep(2)
-                    if imgsearch.imagesearch("img/riprova.png")[0] != -1:
-                        hc.move((193, 735), 1)
-                        hc.click()
-                        print(f"clicco riprova")
-                        time.sleep(1)
-                    if imgsearch.imagesearch("img/omino.png")[0] != -1:
-                        hc.move((291, 735), 1)
-                        hc.click()
-                        print(f"clicco omino")
-                    time.sleep(1)
+
+
+                # clicca su omino
+                #if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                 #   hc.move((231, 824), 1)
+                 #   hc.click()
+                 #   print(f"clicco omino")
+                 #   time.sleep(2)
+                while imgsearch.imagesearch("img/riprova.png")[0] != -1:
+                    hc.move((193, 735), 1)
+                    hc.click()
+                    print(f"clicco riprova")
+                    time.sleep(2)
+                    #if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                    hc.move((291, 735), 1)
+                    hc.click()
+                    print(f"clicco omino")
+                    time.sleep(2)
+                    
                     if imgsearch.imagesearch("img/approve.png")[0] != -1:
                         hc.move((285, 709), 1)
                         hc.click()
@@ -81,6 +89,7 @@ def run():
                     hc.move((550, 883), 1)
                     hc.click()
                     print(f"clicco hub")
+                    
 
                 time.sleep(1)
             except:
