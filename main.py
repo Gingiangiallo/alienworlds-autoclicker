@@ -47,6 +47,27 @@ def run():
                     hc.click()
                     print(f"clicco omino")
                     time.sleep(2)
+                    while imgsearch.imagesearch("img/riprova.png")[0] != -1:
+                        hc.move((193, 735), 1)
+                        hc.click()
+                        print(f"clicco riprova")
+                        time.sleep(2)
+                        #if imgsearch.imagesearch("img/omino.png")[0] != -1:
+                        hc.move((291, 735), 1)
+                        hc.click()
+                        print(f"clicco omino")
+                        time.sleep(2)
+                        
+                        if imgsearch.imagesearch("img/approve.png")[0] != -1:
+                            hc.move((285, 709), 1)
+                            hc.click()
+                            print(f"clicco approva")
+                        
+                        time.sleep(1)
+                        hc.move((285, 709), 1)
+                        hc.click()
+                        print(f"clicco approva")
+                        time.sleep(1)
 
 
                 # clicca su omino
@@ -55,23 +76,11 @@ def run():
                  #   hc.click()
                  #   print(f"clicco omino")
                  #   time.sleep(2)
-                while imgsearch.imagesearch("img/riprova.png")[0] != -1:
-                    hc.move((193, 735), 1)
-                    hc.click()
-                    print(f"clicco riprova")
-                    time.sleep(2)
-                    #if imgsearch.imagesearch("img/omino.png")[0] != -1:
-                    hc.move((291, 735), 1)
-                    hc.click()
-                    print(f"clicco omino")
-                    time.sleep(2)
-                    
-                    if imgsearch.imagesearch("img/approve.png")[0] != -1:
-                        hc.move((285, 709), 1)
-                        hc.click()
-                        print(f"clicco approva")
-                        time.sleep(1)
                 
+                if imgsearch.imagesearch("img/approve.png")[0] != -1:
+                            hc.move((285, 709), 1)
+                            hc.click()
+                            print(f"clicco approva")
                                     
                     
                 #if imgsearch.imagesearch("img/approve.png")[0] != -1:
