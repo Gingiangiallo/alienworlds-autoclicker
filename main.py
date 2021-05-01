@@ -36,9 +36,9 @@ def run():
                     hc.move((958, 634), 1)
                     hc.click()
                     print(f"clicco claim")
-                    time.sleep(7)                   
+                    #time.sleep(10)                   
                     # clicca su recaptcha
-                    #if imgsearch.imagesearch("img/recaptcha.png")[0] != -1:
+                if imgsearch.imagesearch("img/recaptcha.png")[0] != -1:
                     hc.move((182, 603), 1)
                     hc.click()
                     print(f"clicco recaptcha")
@@ -56,18 +56,20 @@ def run():
                         hc.move((291, 735), 1)
                         hc.click()
                         print(f"clicco omino")
-                        time.sleep(2)
-                        
+                        time.sleep(2)                            
                         if imgsearch.imagesearch("img/approve.png")[0] != -1:
                             hc.move((285, 709), 1)
                             hc.click()
                             print(f"clicco approva")
-                        
                         time.sleep(1)
                         hc.move((285, 709), 1)
                         hc.click()
                         print(f"clicco approva")
                         time.sleep(1)
+                    if imgsearch.imagesearch("img/approve.png")[0] != -1:
+                        hc.move((285, 709), 1)
+                        hc.click()
+                        print(f"clicco approva")
 
 
                 # clicca su omino
@@ -77,10 +79,7 @@ def run():
                  #   print(f"clicco omino")
                  #   time.sleep(2)
                 
-                if imgsearch.imagesearch("img/approve.png")[0] != -1:
-                            hc.move((285, 709), 1)
-                            hc.click()
-                            print(f"clicco approva")
+                
                                     
                     
                 #if imgsearch.imagesearch("img/approve.png")[0] != -1:
